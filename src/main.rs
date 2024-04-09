@@ -1,3 +1,4 @@
+mod slice;
 fn main() {
     let rectangulo1=Rectangle{
         width:32.5,
