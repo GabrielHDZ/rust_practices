@@ -20,5 +20,5 @@ struct Rectangle{
 }
 
 fn calculo_rectangulo(figure:&Rectangle)->u32{
-    (figure.width * figure.height) as u32
+    (figure.width * figure.height) as u32 
 }
