@@ -88,3 +88,34 @@ pub fn conversions(){
 
 
 }
+
+pub fn operators(){
+    let a = 10;
+    let b = 3;
+    println!("Addition: {}", a + b); // 13
+    println!("Subtraction: {}", a - b); // 7
+    println!("Multiplication: {}", a * b); // 30
+    println!("Division: {}", a / b); // 3
+    println!("Remainder: {}", a % b); // 1
+
+    let mut a = 5;
+    a += 2; // equivalent to a = a + 2;
+    println!("After addition: {}", a); // 7
+    a *= 3; // equivalent to a = a * 3;
+    println!("After multiplication: {}", a); // 21
+
+    let x = 5;
+    let y = 7;
+    println!("Equal: {}", x == y); // false
+    println!("Not equal: {}", x != y); // true
+    println!("Less than: {}", x < y); // true
+    println!("Greater than: {}", x > y); // false
+    println!("Less than or equal to: {}", x <= y); // true
+    println!("Greater than or equal to: {}", x >= y); // false
+
+    let a = true;
+    let b = false;
+    println!("Logical AND: {}", a && b); // false
+    println!("Logical OR: {}", a || b); // true
+    println!("Logical NOT: {}", !a); // false
+}
