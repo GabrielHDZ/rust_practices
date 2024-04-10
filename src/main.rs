@@ -14,7 +14,10 @@ fn main() {
     dbg!(&rect2);
 
     //slice::slice_example();
-    session01::conversions(); 
+    //session01::conversions(); 
+    let x=Box::new(100);
+    let t=x;
+    print!("value X: {:?}, value Y:{:?}",x,t);
 }
 struct Unit;
 struct Point(f32,f32);

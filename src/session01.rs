@@ -66,11 +66,11 @@ pub fn conversions(){
     println!("integer = {}", integer); // 65
     println!("character = {}", character); // A
 
-    let integer: i32 = 65;
+    /* let integer: i32 = 65;
     let character = integer as char;  // invalid cast
     // only `u8` can be cast as `char`, not `i32`
     println!("integer = {}" , integer);
-    println!("character = {}", character);
+    println!("character = {}", character); */
 
     let boolean1: bool = false;
     let boolean2: bool = true;
@@ -81,10 +81,10 @@ pub fn conversions(){
     println!("integer1 = {}", integer1); // 0
     println!("integer2 = {}", integer2); // 1
 
-    let decimal: f32 = 65.321;
+    /* let decimal: f32 = 65.321;
     let character = decimal as char; // Error: only `u8` can be cast as `char`, not `f32`
     println!("decimal = {}", decimal);
-    println!("character = {}", character);
+    println!("character = {}", character); */
 
 
 }
