@@ -1,4 +1,5 @@
 mod slice;
+mod session01;
 fn main() {
     let rectangulo1=Rectangle{
         width:32.5,
@@ -13,6 +14,7 @@ fn main() {
     dbg!(&rect2);
 
     slice::slice_example();
+    session01::primitives();
 }
 struct Unit;
 struct Point(f32,f32);
