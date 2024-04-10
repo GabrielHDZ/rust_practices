@@ -11,6 +11,8 @@ fn main() {
     };
     println!("Hello, world!, {:?}",calculo_rectangulo(&rectangulo1));
     dbg!(&rect2);
+
+    slice::slice_example();
 }
 struct Unit;
 struct Point(f32,f32);
