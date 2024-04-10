@@ -1,5 +1,5 @@
 /// The function `session01` in Rust defines constants and variables to demonstrate basic usage.
-fn session01(){
+pub fn session01(){
     const MAX_POINTS:u32=100_000;
     let mut counter=1;
     counter+=1;
@@ -34,5 +34,57 @@ pub fn primitives(){
     let cadena_1:&str="cadena de caracteres(referencia)";
     //owned strings dynamic alocate(owned)
     let cadena_2:String=String::from("Cadena de caracteres(String)");
+
+}
+
+pub fn referencias(){
+    let x=43;
+    let mut y=12;
+    let referencia=&x;
+    let mut_1:&i32=&y;
+    let mut_referencia=&mut y;
+    *mut_referencia += 5;
+
+    // Accessing the value through the reference
+    println!("Value through immutable reference: {}", *referencia);  // 10
+    println!("Value through mutable reference: {}", y);  // 15
+}
+
+pub fn conversions(){
+    let decimal: f32 = 64.31;
+    let integer = decimal as u16;
+    println!("decimal = {}", decimal); // 64.31
+    println!("integer = {}", integer); // 64
+
+    let character: char = 'A';
+    let integer = character as u8;
+    println!("character = {}", character); // A
+    println!("integer = {}", integer); // 65
+
+    let integer: u8 = 65;
+    let character = integer as char;
+    println!("integer = {}", integer); // 65
+    println!("character = {}", character); // A
+
+    let integer: i32 = 65;
+    let character = integer as char;  // invalid cast
+    // only `u8` can be cast as `char`, not `i32`
+    println!("integer = {}" , integer);
+    println!("character = {}", character);
+
+    let boolean1: bool = false;
+    let boolean2: bool = true;
+    let integer1 = boolean1 as i32;
+    let integer2 = boolean2 as i32;
+    println!("boolean1 = {}", boolean1); // false
+    println!("boolean2 = {}", boolean2); // true
+    println!("integer1 = {}", integer1); // 0
+    println!("integer2 = {}", integer2); // 1
+
+    let decimal: f32 = 65.321;
+    let character = decimal as char; // Error: only `u8` can be cast as `char`, not `f32`
+    println!("decimal = {}", decimal);
+    println!("character = {}", character);
+
 
 }

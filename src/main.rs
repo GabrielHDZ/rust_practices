@@ -13,8 +13,8 @@ fn main() {
     println!("Hello, world!, {:?}",calculo_rectangulo(&rectangulo1));
     dbg!(&rect2);
 
-    slice::slice_example();
-    session01::primitives();
+    //slice::slice_example();
+    session01::conversions(); 
 }
 struct Unit;
 struct Point(f32,f32);
