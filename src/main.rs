@@ -1,5 +1,6 @@
 mod slice;
 mod session01;
+mod shadowing;
 fn main() {
     let rectangulo1=Rectangle{
         width:32.5,
@@ -15,7 +16,8 @@ fn main() {
 
     //slice::slice_example();
     //session01::conversions(); 
-    
+
+    shadowing::shad();    
 }
 struct Unit;
 struct Point(f32,f32);
