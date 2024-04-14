@@ -1,3 +1,5 @@
+use std::io;
+
 mod rectangle;
 mod slice;
 mod session01;
@@ -8,5 +10,5 @@ fn main() {
     //slice::slice_example();
     //session01::conversions(); 
     //shadowing::shad();    
-
+    contratos::ejemplo();
 }
