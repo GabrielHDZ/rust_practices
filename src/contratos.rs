@@ -12,6 +12,12 @@ pub fn ejemplo(){
     io::stdin()
         .read_line(&mut entrada)
         .expect("Mes no registrado, para el usuario");
+    let entrada:&str=entrada.as_str();
+    let result = match entrada  {
+        "enero" => "valid",
+    };
+
+
     println!("values {:?}  {:?}", contrato.0, contrato.1);
 
 }
