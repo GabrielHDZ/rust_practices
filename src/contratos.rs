@@ -12,6 +12,15 @@ pub fn ejemplo(){
         .read_line(&mut entrada)
         .expect("Mes no registrado, para el usuario");       
 
+    let s2=entrada.clone();
+
+    println!("{entrada}");
+    
+    let s3="mundo";
+    let s4=s3;
+    
+    println!("{s3} , {s4}");
+
     println!("values {:?}  {:?}", contrato.0, contrato.1);
 
 }
