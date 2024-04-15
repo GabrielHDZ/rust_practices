@@ -10,9 +10,7 @@ pub fn ejemplo(){
     println!("ingrese el mes de consulta de datos");
     io::stdin()
         .read_line(&mut entrada)
-        .expect("Mes no registrado, para el usuario");
-
-        
+        .expect("Mes no registrado, para el usuario");       
 
     println!("values {:?}  {:?}", contrato.0, contrato.1);
 
