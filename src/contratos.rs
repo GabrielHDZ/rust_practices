@@ -25,3 +25,7 @@ pub fn ejemplo(){
     println!("values {:?}  {:?}", contrato.0, contrato.1);
 
 }
+
+fn example2(){
+    
+}
