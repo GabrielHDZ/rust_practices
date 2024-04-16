@@ -2,8 +2,8 @@ struct Unit;
 struct Point(f32,f32);
 #[derive(Debug)]
 struct Rectangle{
-    width:f32,
-    height:f32,
+    width:f64,
+    height:f64,
 }
 
 fn calculo_rectangulo(figure:&Rectangle)->u32{
@@ -17,7 +17,7 @@ pub fn view(){
     };
     let scale =2;
     let rect2:Rectangle=Rectangle{
-        width:dbg!(3.3 * scale as f32),
+        width:dbg!(3.3 * scale as f64),
         height:12.3
     };
     println!("Hello, world!, {:?}",calculo_rectangulo(&rectangulo1));
