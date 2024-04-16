@@ -14,8 +14,8 @@ pub fn ejemplo(){
         .expect("Mes no registrado, para el usuario");       
 
     let s2=entrada.clone();
-
     println!("{entrada}");
+
     //stack
     let s3="mundo";
     let s4=s3;
