@@ -6,6 +6,7 @@ pub fn ejemplo(){
     //example tupla, puede guardar datos de diferentes tipos
     let contrato:(&str,i64,bool)=("carlos",2_500,false);
     let (name,amount,status)=contrato;
+    //heap
     let mut entrada=String::new();
     println!("ingrese el mes de consulta de datos");
     io::stdin()
@@ -15,7 +16,7 @@ pub fn ejemplo(){
     let s2=entrada.clone();
 
     println!("{entrada}");
-    
+    //stack
     let s3="mundo";
     let s4=s3;
     
