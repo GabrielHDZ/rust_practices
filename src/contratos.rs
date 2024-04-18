@@ -1,7 +1,7 @@
 use std::io;
 
 pub fn ejemplo(){
-    
+
     //example array, solo guarda datos del mismo tipo
     let months = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
     //example tupla, puede guardar datos de diferentes tipos
@@ -18,6 +18,7 @@ pub fn ejemplo(){
     println!("{entrada}");
 
     //stack
+    
     let s3="mundo";
     let s4=s3;
     
