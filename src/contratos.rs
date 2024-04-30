@@ -7,7 +7,7 @@ pub fn ejemplo(){
     let contrato:(&str,i64,bool)=("carlos",2_500,false);
     let (name,amount,status)=contrato;
 
-    //!declaramos una variable de tipo String, que se inicializa en el heap
+    //declaramos una variable de tipo String, que se inicializa en el heap
     let mut entrada=String::new();
     println!("ingrese el mes de consulta de datos");
     io::stdin()
