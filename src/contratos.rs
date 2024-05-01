@@ -1,5 +1,11 @@
 use std::io;
 
+struct contract{
+    month:String,
+    name:String,
+    is_active:bool,
+    amount:i64
+}
 pub fn ejemplo(){
     //example array, solo guarda datos del mismo tipo
     let months = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
