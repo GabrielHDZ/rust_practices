@@ -10,7 +10,7 @@ pub fn session01(){
 
 pub fn primitives(){
     //INTEGER signed i8 i16 i32 i64 i128 isize
-    let number_int_signed:i32 =32;
+    let number_int_signed:i32 =-32;
 
     //unsigned u8 u16 u32 u64 u128 usize
     let number_int_unsigned:u32 =100;
@@ -19,10 +19,15 @@ pub fn primitives(){
     let number_f:f32=5.55;
     let is_true:bool=true;
     let character:char='A';
-    let mut array_1:[i32;4]=[12,12,23,4];
-    array_1[2]=3;
-    let tupla:(i32,bool,&str)=(2,true,"cierto");
 
+    let tupla:(i32,bool,&str)=(2,true,"cierto");
+    let (_,y,_)=tupla;
+    let c=tupla.1;
+
+    let mut array_1:[i32;4]=[12,12,23,4];
+    let first=array_1[0];
+    array_1[2]=3;
+    
     //Slice provide a flexible way to work  with arrays
     let cp_array:&[i32]=&array_1[1..=3];
     for i in cp_array{

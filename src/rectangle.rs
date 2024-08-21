@@ -6,8 +6,24 @@ struct Rectangle{
     height:f64,
 }
 
-fn calculo_rectangulo(figure:&Rectangle)->u32{
-    (figure.width * figure.height) as u32 
+impl Rectangle{
+    fn area(&self)->u32{
+        (self.width * self.height) as u32 
+    }
+    fn width(&self) -> bool {
+        self.width > 0.0
+    }
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+    //fn asociada
+    fn square(size: f64) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
+
 }
 
 pub fn view(){
@@ -20,6 +36,10 @@ pub fn view(){
         width:dbg!(3.3 * scale as f64),
         height:12.3
     };
-    println!("Hello, world!, {:?}",calculo_rectangulo(&rectangulo1));
+    println!("Hello, world!, {:?}",rectangulo1.area());
     dbg!(&rect2);
+
+    if rectangulo1.width() {
+        println!("The rectangle has a nonzero width; it is {}", rectangulo1.width);
+    }
 }

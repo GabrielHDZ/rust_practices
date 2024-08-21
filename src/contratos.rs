@@ -1,4 +1,4 @@
-use std::io;
+use std::{io, num::ParseIntError};
 
 struct contract{
     month:String,
@@ -34,5 +34,12 @@ pub fn ejemplo(){
 }
 
 fn example2(){
+    const MAX_ITERATORS:u32=50;  
+
+    let caracter='C';
+    println!("{}",caracter);
+    let caracter=34;
+    println!("{}",caracter);
+    
     
 }
