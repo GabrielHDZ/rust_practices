@@ -13,7 +13,7 @@ pub fn build_product(name:String,price:u32)->Product{
         price,
     }
 }
-pub fn estructuras(){
+pub fn run(){
     //esto es una sentencia
     let mut galleta_gamesa=Product{
         name:String::from("Galletas Gamesa"),
@@ -29,5 +29,6 @@ pub fn estructuras(){
     let comentario=Recomended;
     
     galleta_gamesa.price=12;
+
 
  }

@@ -1,6 +1,6 @@
-use std::{io, num::ParseIntError};
+use std::io;
 
-struct contract{
+struct Contract{
     month:String,
     name:String,
     is_active:bool,
@@ -8,10 +8,10 @@ struct contract{
 }
 pub fn ejemplo(){
     //example array, solo guarda datos del mismo tipo
-    let months = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
+    let _months = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
     //example tupla, puede guardar datos de diferentes tipos
     let contrato:(&str,i64,bool)=("carlos",2_500,false);
-    let (name,amount,status)=contrato;
+    let (_name,_amount,_status)=contrato;
 
     //declaramos una variable de tipo String, que se inicializa en el heap
     let mut entrada=String::new();
@@ -19,7 +19,7 @@ pub fn ejemplo(){
     io::stdin()
         .read_line(&mut entrada)
         .expect("Mes no registrado, para el usuario");       
-    let s2=entrada.clone();
+    let _s2=entrada.clone();
     println!("{entrada}");
 
     //stack

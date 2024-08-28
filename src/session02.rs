@@ -5,13 +5,13 @@
 //referencias y prestamos
 pub fn types_variables(){
     //stack 
-    let num:i32=-4;
-    let mut cadena:&str="cadena de tipo literal";
-    let verdadero:bool=true;
+    let _num:i32=-4;
+    let mut _cadena:&str="cadena de tipo literal";
+    let _verdadero:bool=true;
     //heap
-    let mut cadena_string:String=String::from("cadena inicializada desde String");
-    cadena_string.push_str("rust");
-    let cadena_retorno:String=mutability(cadena,cadena_string);
+    let mut _cadena_string:String=String::from("cadena inicializada desde String");
+    _cadena_string.push_str("rust");
+    let _cadena_retorno:String=mutability(_cadena,_cadena_string);
     //println!("cadena 1:{cadena_string}, cadena 2 {cadena_retorno}");
 }
 
@@ -42,4 +42,24 @@ pub fn first_word(s: &str) -> &str {
         }
     }
     &s[..]
+}
+pub fn run(){
+    let my_string = String::from("hello world");
+    
+        // `first_word` funciona con slices de un string, sean parciales o completos.
+        let _word = first_word(&my_string[0..6]);
+        let _word = first_word(&my_string[..]);
+        // `first_word` también funciona con referencias de un string, que son equivalentes
+        // a un slice completo de un String
+        let _word = first_word(&my_string);
+    
+        let my_string_literal = "hello world";
+    
+        // `first_word` funciona con slices de string literales, sean parciales o completos
+        let _word = first_word(&my_string_literal[0..6]);
+        let _word = first_word(&my_string_literal[..]);
+    
+        // Por que los strings literales son slices de strings,esto también funciona,
+        // sin necesidad de usar la sintaxis de slices.
+        let _word = first_word(my_string_literal);
 }

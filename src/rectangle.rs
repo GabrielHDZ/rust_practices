@@ -23,7 +23,6 @@ impl Rectangle{
             height: size,
         }
     }
-
 }
 
 pub fn view(){
