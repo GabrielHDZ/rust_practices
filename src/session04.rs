@@ -10,11 +10,17 @@ impl Soldadura {
     }
 }
 
+#[derive(Debug)] // so we can inspect the state in a minute
+pub enum UsState {
+    Alabama,
+    Alaska,
+    // --snip--
+}
 pub enum Coin {
     Penny,
     Nickel,
     Dime,
-    Quarter,
+    Quarter(UsState),
 }
 
 pub fn value_in_cents(coin: Coin) -> u8 {
@@ -22,8 +28,10 @@ pub fn value_in_cents(coin: Coin) -> u8 {
         Coin::Penny => 1,
         Coin::Nickel => 5,
         Coin::Dime => 10,
-        Coin::Quarter => 25,
-        _=> 1,
+        Coin::Quarter(state) =>{
+            println!("State quarter from {state:?}!");
+            25
+        },
     }
 }
 pub fn run(){
@@ -35,7 +43,33 @@ pub fn run(){
     let _number1:Option<i32>=Option::Some(15);
     let _number2:Option<i32>=Option::None;
     println!("{:?}  {:?}",_number1,_number2);
-    let data=value_in_cents(Coin::Penny);
+    let data=value_in_cents(Coin::Dime);
 }
+
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
+pub fn run_match(){
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+}
+
+pub fn roll(){
+    let dice_roll = 9;
+    match dice_roll {
+        3 => add_fancy_hat(),
+        7 => remove_fancy_hat(),
+        _ => (),
+    }
+
+    fn add_fancy_hat() {}
+    fn remove_fancy_hat() {}
+}
+
+
 
 
