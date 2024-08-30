@@ -33,6 +33,14 @@ pub fn value_in_cents(coin: Coin) -> u8 {
             25
         },
     }
+
+/*     let mut count = 0;
+    if let Coin::Quarter(state) = coin {
+        println!("State quarter from {state:?}!");
+    } else {
+        count += 1;
+    }
+ */
 }
 pub fn run(){
     let soldador1=Soldadura::MIG(String::from("Microalambre"),String::from("Argon"));
