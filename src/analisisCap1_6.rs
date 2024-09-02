@@ -5,6 +5,13 @@ struct Pelota{
     material:String,
 }
 
+enum TypePelota{
+    Futbol,
+    Americano,
+    Beisbol,
+    Basquetbol,
+}
+
 impl Pelota{
     fn new(diametro:u32,material:String)->Pelota{
         Pelota{
@@ -27,5 +34,11 @@ pub fn run(){
     p_futbol.get();
     p_futbol.set_diametro(20);
     p_futbol.get();
+    match TypePelota {
+        TypePelota::Futbol=>println!("Es una pelota de futbol"),
+        TypePelota::Americano=>println!("Es una pelota de futbol americano"),
+        TypePelota::Basquetbol=>println!("pelota de basquetbol"),
+        TypePelota::Beisbol=>println!("pelota de basquetbol"),
+    }
 }
 
