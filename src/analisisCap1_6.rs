@@ -1,15 +1,6 @@
-
-
 struct Pelota{
     diametro:u32,
     material:String,
-}
-
-enum TypePelota{
-    Futbol,
-    Americano,
-    Beisbol,
-    Basquetbol,
 }
 
 impl Pelota{
@@ -25,6 +16,13 @@ impl Pelota{
     fn set_diametro(&mut self,new_diam:u32){
         self.diametro=new_diam;
     }
+}
+
+enum TypePelota{
+    Futbol,
+    Americano,
+    Beisbol,
+    Basquetbol,
 }
 
 pub fn run(){
