@@ -18,12 +18,6 @@ impl Pelota{
     }
 }
 
-enum TypePelota{
-    Futbol,
-    Americano,
-    Beisbol,
-    Basquetbol,
-}
 
 pub fn run(){
     //Creamos instancia de Pelota
@@ -32,11 +26,6 @@ pub fn run(){
     p_futbol.get();
     p_futbol.set_diametro(20);
     p_futbol.get();
-    match TypePelota {
-        TypePelota::Futbol=>println!("Es una pelota de futbol"),
-        TypePelota::Americano=>println!("Es una pelota de futbol americano"),
-        TypePelota::Basquetbol=>println!("pelota de basquetbol"),
-        TypePelota::Beisbol=>println!("pelota de basquetbol"),
-    }
+
 }
 
