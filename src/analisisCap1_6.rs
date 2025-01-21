@@ -2,8 +2,13 @@ struct Pelota{
     diametro:u32,
     material:String,
 }
+trait Soccer{
+    fn new(d:u32,m:String)->Pelota;
+    fn get(&self);
+    fn set_diametro(&mut self,new:u32);
+}
 
-impl Pelota{
+impl Soccer for Pelota{
     fn new(diametro:u32,material:String)->Pelota{
         Pelota{
             diametro,
